@@ -84,7 +84,12 @@ Be prudent when creating new files and directories.
 Create new component files over packing multiple components in a single file. There are exceptions for small components that are only used within a parent component.
 
 Prefer the following:
-- providers over hooks
+- Use providers for shared state, use hooks for logic that only affects one component's state
 - useSWR for fetching data
 - server-side rendering/components for marketing pages
 
+## on DB queries
+For typescript projects, use drizzle over raw SQL.
+
+## On exporting
+Do not use `index.ts` or export functions and classes that are not in that file. Only export functions, types, classes, and objects when they are defined in the file.
